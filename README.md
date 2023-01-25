@@ -122,16 +122,16 @@ If you want to contribute or share soem thoughts, just get in touch with us.
 
 Enjoy.
 
-# link-component
+# button-component
 
 ## Install
 
 ```bash
-yarn add link-component
+yarn add button-component
 ```
 
 ```bash
-npm i link-component
+npm i button-component
 ```
 
 ## Usage
@@ -142,8 +142,8 @@ npm i link-component
 
 ```js
 <template>
-  <link-component>
-  </link-component>
+  <button-component text="button">
+  </button-component>
 </template>
 
 <script>
@@ -162,14 +162,14 @@ export default {
 
 ```js
 <template>
-    <link-component
-    text="Anchor tag with props"
-    linkTitle="tool tip"
-    href="https://www.w3schools.com/html/html_links.asp"
-    target="_blank"
-    rel="noopener noreferrer"
-    type="button"
-  ></link-component>
+  <button-component
+    text="button"
+    variant="contained"
+    color="primary"
+    :isDisabled="false"
+    :fullWidth="false"
+    :isRounded="false"
+  ></button-component>
 </template>
 
 <script>
@@ -188,22 +188,24 @@ export default {
 
 ```js
 <template>
-    <link-component
-    text="Anchor tag with props"
-    linkTitle="tool tip"
-    href="https://www.w3schools.com/html/html_links.asp"
-    target="_blank"
-    rel="noopener noreferrer"
-    type="button"
+  <button-component
+    text="button"
+    variant="contained"
+    color="primary"
+    :isDisabled="false"
+    :fullWidth="false"
+    :isRounded="false"
     slotName="slot"
   >
     <div slot="slot">
+      <p>Add any Slot Elements</p>
       <img
-        src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg"
+        style="width:50%"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
         alt=""
       />
     </div>
-  </link-component>
+  </button-component>
 </template>
 
 <script>
@@ -230,10 +232,10 @@ npm i reactify-wc
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const ButtonComponent = reactifyWc("button-component");
   return (
     <div className="App">
-      <LinkComponent></LinkComponent>
+      <ButtonComponent text="button"></ButtonComponent>
     </div>
   );
 }
@@ -241,21 +243,20 @@ export default App;
 ```
 
 ### With Props
-
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const ButtonComponent = reactifyWc("button-component");
   return (
-    <div >
-      <LinkComponent
-        text="Anchor tag with props"
-        linkTitle="tool tip"
-        href="https://www.w3schools.com/html/html_links.asp"
-        target="_blank"
-        rel="noopener noreferrer"
-        type="button" // by default type is link
-      ></LinkComponent>
+    <div className="App">
+      <ButtonComponent
+        text="button"
+        variant="contained"
+        color="primary"
+        isDisabled={false}
+        fullWidth={false}
+        isRounded={false}
+      ></ButtonComponent>
     </div>
   );
 }
@@ -266,25 +267,27 @@ export default App;
 ```js
 import reactifyWc from "reactify-wc";
 function App() {
-  const LinkComponent = reactifyWc("link-component");
+  const ButtonComponent = reactifyWc("button-component");
   return (
-    <div >
-      <LinkComponent
-        text="Anchor tag with props"
-        linkTitle="tool tip"
-        href="https://www.w3schools.com/html/html_links.asp"
-        target="_blank"
-        rel="noopener noreferrer"
-        type="button"
+    <div className="App">
+      <ButtonComponent
+        text="button"
+        variant="contained"
+        color="primary"
+        isDisabled={false}
+        fullWidth={false}
+        isRounded={false}
         slotName="slot"
       >
-          <div slot="slot">
-         <img
-            src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg"
-            alt=""
-          ></img>
-        </div>
-      </LinkComponent>
+           <div slot="slot">
+      <p>Add any Slot Elements</p>
+      <img
+        style={{width:"50%"}}
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-thsyY7pcpafX5U5CN_fkREa_Bmrvak0sRg&usqp=CAU"
+        alt=""
+      />
+    </div>
+      </ButtonComponent>
     </div>
   );
 }
@@ -297,9 +300,9 @@ Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/::part
 ```style.scss
 //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
 
-link-component::part(custom-link) { /*Note : link-component is the custom component and custom-link is the name given to the the part attribute in element within link-components */
- color: black;
- text-decoration: none;
+button-component::part(custom-button) { /*Note : button-component is the custom component and custom-button is the name given to the the part attribute in element within button-component */
+background-color: yellow;
+color:black;
 //add css properties
  }
 ```
@@ -327,53 +330,51 @@ link-component::part(custom-link) { /*Note : link-component is the custom compon
           <td>text</td>
           <td>String</td>
           <td>no</td>
-          <td>Click Here</td>
           <td></td>
-          <td>This will add text to the anchor tag</td>
+          <td></td>
+          <td>This will add text to the button tag</td>
         </tr>
         <tr>
-          <td>linkTitle</td>
+          <td>variant</td>
           <td>String</td>
           <td>no</td>
-          <td></td>
-          <td></td>
-          <td>The title attribute specifies extra information about an element.
-              The information is most often shown as a tooltip text when the mouse moves over the element.
+          <td>contained</td>
+          <td>contained | outlined | link</td>
+          <td>Choose from several predefined button styles to customize the button component
           </td>
         </tr>		
         <tr>
-          <td>href</td>
+          <td>color</td>
           <td>String</td>
           <td>no</td>
-          <td>#</td>
-          <td></td>
-          <td>The most important attribute of the <a> element is the href attribute, which indicates the link's destination.</td>
+          <td>primary</td>
+          <td>primary | secondary | success | danger | warning | light | dark</td>
+          <td>Choose from several predefined button colors to customize the button component</td>
         </tr>
         <tr>
-          <td>rel</td>
-          <td>String</td>
+          <td>isDisabled</td>
+          <td>Boolean</td>
           <td>no</td>
           <td></td>
-          <td>alternate | author | bookmark | external | help | license | next | nofollow | noopener | noreferrer | prev | search | tag | framename</td>
-          <td>The rel attribute specifies the relationship between the current document and the linked document.
-              Only used if the href attribute is present.
+          <td>true | false</td>
+          <td>The isDisabled attribute can be made true to keep a user from clicking on the button until some other condition has been met. Then it can be made false to make the button clickable again.
           </td>
         </tr>
         <tr>
-          <td>target</td>
-          <td>string</td>
+          <td>fullWidth</td>
+          <td>Boolean</td>
           <td>no</td>
-          <td>_self</td>
-          <td>_blank | _self | _parent | _top | framename </td>
-          <td>The target attribute specifies where to open the linked document.</td>
+          <td></td>
+          <td>true | false</td>
+          <td>This attribute changes the width of the button to 100%.</td>
         </tr>
         <tr>
-          <td>type</td>
-          <td>String</td>
+          <td>isRounded</td>
+          <td>Boolean</td>
           <td>no</td>
-          <td>link</td>
-          <td>link | button</td>
-          <td>by default anchor tag will just have a text without any styling, but if type is given as a button, UI changes to that of a button </td>
+          <td></td>
+          <td>true | false</td>
+          <td>This attribute is used to get rounded corners </td>
         </tr>
         <tr>
           <td>slotName</td>
@@ -388,8 +389,8 @@ link-component::part(custom-link) { /*Note : link-component is the custom compon
 
 ## Accessibility
 
-Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the link component easily.
+Throughout the development of this component proper a11y options are set. This means things like aria-expanded , aria-label, aria-current, aria-control are set and any user can use the button component easily.
 
 ## Localization
 
-Link component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]
+Button component supports localization, currently supports English[en], Spanish[es-419] and Chinese[zh-Hans]
