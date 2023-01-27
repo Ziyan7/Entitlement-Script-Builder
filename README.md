@@ -481,8 +481,7 @@ color:black;
           <td>no</td>
           <td></td>
           <td>true | false</td>
-          <td>The isDisabled attribute can be made true to keep a user from clicking on the button until some other condition has been met. Then it can be made false to make the button clickable again.
-          </td>
+          <td>Disables the button to make it unusable and un-clickable.</td>
         </tr>
         <tr>
           <td>fullWidth</td>
@@ -490,7 +489,7 @@ color:black;
           <td>no</td>
           <td></td>
           <td>true | false</td>
-          <td>This attribute changes the width of the button to 100%.</td>
+          <td>Changes the width of the button to 100%.</td>
         </tr>
         <tr>
           <td>isRounded</td>
