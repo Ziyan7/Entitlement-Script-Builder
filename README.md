@@ -190,7 +190,7 @@ export default {
 
 <template>
   <transition-component :componentArray="['slot1', 'slot2', 'slot3']" animationDuration=3 animationDelay=2 :allowCircularSwipe="true" backgroundColor="#ececec">
-    <div slot="slot1">
+      <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
         <p>company</p>
         <img
@@ -235,7 +235,7 @@ export default {
 
 ```js
 <template>
-  //Note: always write callbackEvent name in kebab case
+   //Note: User can give any name to the callbackEvent but it need to in kebab-case and same name should be used while using the custom event as shown in the example below.
   <transition-component :componentArray="['slot1', 'slot2', 'slot3']"  callbackEvent="on-custom-callback" @on-custom-callback="handleCallBack">
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
