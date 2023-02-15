@@ -142,9 +142,9 @@ npm i transition-component
 
 ```js
 <template>
-  //Note: User can give any name to the slot but make sure to add the same name in the componentArray prop
+  <!-- Note: User can give any name to the slot but make sure to add the same name in the componentArray prop -->
   <transition-component :componentArray="['slot1', 'slot2', 'slot3']">
-    //Note: Wrap the component within container element containing the slot attribute
+    <!-- Note: Wrap the component within container element containing the slot attribute -->
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
         <p>company</p>
@@ -188,9 +188,14 @@ export default {
 
 ### With Props
 
+```js
 <template>
   <transition-component 
-    :componentArray="['slot1', 'slot2', 'slot3']" >
+    :componentArray="['slot1', 'slot2', 'slot3']" 
+    :allowCircularSwipe="true" 
+    :animationDuration=3 
+    :animationDelay=2 
+    backgroundColor="#ececec">
       <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
         <p>company</p>
@@ -236,7 +241,7 @@ export default {
 
 ```js
 <template>
-   //Note: User can give any name to the callbackEvent but it need to be in kebab-case and same name should be used while using the custom event as shown in the example below.
+    <!-- Note: User can give any name to the callbackEvent but it need to be in kebab-case and same name should be used while using the custom event as shown in the example below. -->
   <transition-component :componentArray="['slot1', 'slot2', 'slot3']"  callbackEvent="on-custom-callback" @on-custom-callback="handleCallBack">
     <div slot="slot1">
       <div style="width: 100vw; height: 100vh">
@@ -457,8 +462,6 @@ background: black;
 //add css properties
  }
 ```
-
-## Compatibility
 
 ## Compatibility
 
