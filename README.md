@@ -65,7 +65,7 @@
             <td>Number</td>
             <td>yes</td>
             <td></td>
-            <td>Scroll point at which slot elements should be removed</td>
+            <td>From which image number, the custom elemnet should start coming up on screen while scrolling</td>
         </tr>
         <tr>
             <td>slotName</td>
