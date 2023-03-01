@@ -345,11 +345,10 @@ scroll-component::part(slot2){
 }
 
 ```
-
 ## Compatibility
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari  
-| --- | --- | --- |
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari  
+| --- | --- | --- | --- |
 
 ## Props
 
@@ -360,7 +359,6 @@ scroll-component::part(slot2){
         <th>type</th>
         <th>required</th>
         <th>default</th>
-        <th>possible values</th>
         <th>description</th>
     </tr>
     </thead>
@@ -370,14 +368,12 @@ scroll-component::part(slot2){
           <td>Object</td>
           <td>yes</td>
           <td></td>
-          <td></td>
           <td>The object having key value pair of image name and it's path for desktop</td>
         </tr>
         <tr>
           <td>mobileImages</td>
           <td>Object</td>
           <td>yes</td>
-          <td></td>
           <td></td>
           <td>The object having key value pair of image name and it's path for mobile </td>
         </tr>
@@ -386,7 +382,6 @@ scroll-component::part(slot2){
           <td>textSlot</td>
           <td>Array[object]</td>
           <td>no</td>
-          <td></td>
           <td></td>
           <td>Slot provided to the user to insert custom elements</td>
         </tr>
@@ -401,7 +396,6 @@ scroll-component::part(slot2){
         <th>name</th>
         <th>type</th>
         <th>required</th>
-        <th>possible values</th>
         <th>description</th>
     </tr>
     </thead>
@@ -410,21 +404,18 @@ scroll-component::part(slot2){
           <td>dataStart</td>
           <td>Number</td>
           <td>yes</td>
-          <td></td>
           <td>From which image number, the custom element should start coming up on screen while scrolling</td>
         </tr>
         <tr>
             <td>dataEnd</td>
             <td>Number</td>
             <td>yes</td>
-            <td></td>
             <td>From which image number, the custom element should go off the screen while scrolling </td>
         </tr>
         <tr>
             <td>slotName</td>
             <td>String</td>
             <td>yes</td>
-            <td></td>
             <td>The name of the slot which renders a HTMLElement or a component</td>
       </tr>
     </tbody>
