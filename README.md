@@ -54,10 +54,22 @@
         </tr>
            <tr>
           <td>cardDimensionUnit</td>
-          <td>CardDimensionUnit</td>
+          <td>string</td>
           <td>no</td>
-          <td>px</td>
-          <td></td>
+          <td>'px'</td>
+          <td>
+ 'cm',
+ 'mm',
+'in',
+   'pt',
+ 'pc',
+ 'em',
+'rem',
+  'ex',
+ 'ch',
+  'vw',
+  'vh',
+  '%'</td>
           <td>The unit for the card width and height</td>
         </tr>
            <tr>
@@ -70,3 +82,5 @@
         </tr>
     </tbody>
 </table>
+
+
