@@ -13,76 +13,60 @@
     </thead>
     <tbody>
         <tr>
-          <td>isRounded</td>
+          <td>hasRoundedBorder</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether or not to have rounded borders</td>
+          <td>Flag to determine whether or not to have rounded borders </td>
         </tr>
         <tr>
-          <td>width</td>
+          <td>cardWidth</td>
           <td>number</td>
           <td>no</td>
-          <td>75</td>
+          <td>300</td>
           <td></td>
-          <td>The width of the avatar component </td>
+          <td>The width of the card component </td>
         </tr>		
         <tr>
-          <td>height</td>
+          <td>cardHeight</td>
           <td>number</td>
           <td>no</td>
-          <td>75</td>
+          <td>300</td>
           <td></td>
-          <td>The height of the avatar component</td>
-        </tr>
-          <tr>
-          <td>usePercentage</td>
-          <td>boolean</td>
-          <td>no</td>
-          <td>false</td>
-          <td>true | false</td>
-          <td>Flag to determine whether or not the dimensions should be in percentages</td>
+          <td>The height of the card component</td>
         </tr>
         <tr>
-          <td>slotName</td>
+          <td>customSlotName</td>
           <td>String</td>
           <td>no</td>
           <td></td>
           <td></td>
           <td>The name of the child slot</td>
         </tr>
-        <tr>
-          <td>onAvatarClick</td>
-          <td>Function</td>
-          <td>no</td>
-          <td></td>
-          <td></td>
-          <td>The click function that gets triggered on avatar component click</td>
-        </tr>
            <tr>
-          <td>showDefaultIcon</td>
+          <td>showCustomSlot</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td> Flag to determine whether to show default avatar icon or not      </td>
+          <td>Flag to determine whether or not to render the custom slot     </td>
         </tr>
            <tr>
-          <td>avatarPartAttribute</td>
-          <td>String</td>
+          <td>cardDimensionUnit</td>
+          <td>CardDimensionUnit</td>
           <td>no</td>
-          <td>webcl-avatar</td>
+          <td>px</td>
           <td></td>
-          <td>The part name for avatar component </td>
+          <td>The unit for the card width and height</td>
         </tr>
            <tr>
-          <td>defaultImage</td>
-          <td>String</td>
+          <td>isHorizontal</td>
+          <td>boolean</td>
           <td>no</td>
-          <td></td>
-          <td></td>
-          <td>The default image to be displayed</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine the content direction</td>
         </tr>
     </tbody>
 </table>
