@@ -184,3 +184,37 @@
     </tbody>
 </table>
 
+## Slot Props
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>prop</th>
+        <th>type</th>
+        <th>required</th>
+        <th>default</th>
+        <th>possible values</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>hasSlot</td>
+          <td>boolean</td>
+          <td>no</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to determine whether or not to render the slot</td>
+        </tr>
+        <tr>
+          <td>slotName</td>
+          <td>string</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>The name of the slot to render </td>
+        </tr>	
+    </tbody>
+</table>
+
+
