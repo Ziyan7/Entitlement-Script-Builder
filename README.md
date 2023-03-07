@@ -18,151 +18,158 @@
           <td>no</td>
           <td></td>
           <td></td>
-          <td>Text area label</td>
+          <td>Text field label</td>
         </tr>
         <tr>
-          <td>textAreaId</td>
+          <td>textFieldId</td>
           <td>string</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>The id for the text area</td>
+          <td>The id for the text field</td>
         </tr>	
          <tr>
-          <td>textAreaName</td>
+          <td>value</td>
           <td>string</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>The name of the text area</td>
+          <td>The value of the text field</td>
         </tr>
         <tr>
-          <td>textAreaRows</td>
-          <td>number</td>
+          <td>placeholder</td>
+          <td>string</td>
           <td>no</td>
-          <td>2</td>
           <td></td>
-          <td>The number of rows for the textarea </td>
+          <td></td>
+          <td>The placeholder for the text field </td>
         </tr>
          <tr>
-          <td>textAreaCols</td>
-          <td>number</td>
+          <td>hintText</td>
+          <td>string</td>
           <td>no</td>
-          <td>20</td>
           <td></td>
-          <td> The number of columns for the textarea</td>
+          <td></td>
+          <td>The hint text for the text field</td>
         </tr>
           <tr>
-          <td>textAreaAutoComplete</td>
+          <td>autocomplete</td>
           <td>string</td>
           <td>no</td>
           <td>off</td>
           <td>'on' | 'off'</td>
-          <td>The autocomplete attribute for the textarea </td>
+          <td>The autocomplete attribute for the text field </td>
         </tr>
            <tr>
-          <td>isAutoFocus</td>
+          <td>autofocus</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether the text area will be focussed initially</td>
+          <td>Flag to determine whether the text field will be focussed initially</td>
         </tr>
            <tr>
-          <td>isDisabled</td>
+          <td>disabled</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether the text area will be disabled</td>
+          <td>Flag to determine whether the text field will be disabled</td>
         </tr>
            <tr>
-          <td>isReadOnly</td>
+          <td>readonly</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether the text area will be readonly</td>
+          <td>Flag to determine whether the text field will be readonly</td>
         </tr>
               <tr>
-          <td>isRequired</td>
+          <td>required</td>
           <td>boolean</td>
           <td>no</td>
           <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether the text area will be required field</td>
+          <td>Flag to determine whether the text field will be required field</td>
         </tr>
           <tr>
           <td>labelPartAttribute</td>
           <td>string</td>
           <td>no</td>
-          <td>webcl-textarea-label</td>
+          <td>text-field-label</td>
           <td></td>
           <td>The part name for label tag  </td>
         </tr>
              <tr>
-          <td>containerPartAttribute</td>
+          <td>iconPartAttribute</td>
           <td>string</td>
           <td>no</td>
-          <td>webcl-textarea-container</td>
+          <td>text-field-icon</td>
           <td></td>
-          <td>The part name for container tag </td>
+          <td>The part name for container tag</td>
         </tr>
               <tr>
-          <td>textAreaPartAttribute</td>
+          <td>hintTextPartAttribute</td>
           <td>string</td>
           <td>no</td>
-          <td>webcl-textarea</td>
+          <td>text-field-hint-text</td>
           <td></td>
-          <td>The part name for textarea tag</td>
+          <td>The part name for hint text tag </td>
         </tr>
-          <tr>
-          <td>formId</td>
+              <td>textFieldPartAttribute</td>
           <td>string</td>
           <td>no</td>
+          <td>text-field-input</td>
           <td></td>
-          <td></td>
-          <td>The id for the form tag the textarea tag is a part of</td>
+          <td>The part name for text field tag </td>
         </tr>
              <tr>
-          <td>textAreaMaxLength</td>
+          <td>minLength</td>
           <td>number</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>The max length for the text area content</td>
+          <td>The min length for the text field</td>
         </tr>
            <tr>
-          <td>textAreaMinLength</td>
+          <td>maxLength</td>
           <td>number</td>
           <td>no</td>
           <td></td>
           <td></td>
-          <td>The min length for the text area content</td>
+          <td>The max length for the text field content</td>
         </tr>
                <tr>
-          <td>textAreaPlaceHolder</td>
-          <td>string</td>
-          <td>no</td>
-          <td></td>
-          <td></td>
-          <td>The placeholder text for the text area </td>
-        </tr>
-                    <tr>
-          <td>changeHandlerName</td>
-          <td>string</td>
-          <td>no</td>
-          <td></td>
-          <td></td>
-          <td>The name of the custom change handler event</td>
-        </tr>
-                  <tr>
-          <td>canResize</td>
+          <td>clearField</td>
           <td>boolean</td>
           <td>no</td>
-          <td>true</td>
+          <td>false</td>
           <td>true | false</td>
-          <td>Flag to determine whether or not the textarea can be resized</td>
+          <td>Flag to clear text field </td>
+        </tr>
+           <tr>
+          <td>error</td>
+          <td>boolean</td>
+          <td>no</td>
+          <td>false</td>
+          <td>true | false</td>
+          <td>Flag to indicate error in input field </td>
+        </tr>
+           <tr>
+          <td>changeHandler</td>
+          <td>string</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>The name of the custom change handler event </td>
+        </tr>
+                  <tr>
+          <td>clickIconHandler</td>
+          <td>string</td>
+          <td>no</td>
+          <td></td>
+          <td></td>
+          <td>The name of the custom click handler event </td>
         </tr>
     </tbody>
 </table>
