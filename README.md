@@ -60,14 +60,6 @@
           <td>'on' | 'off'</td>
           <td>The autocomplete attribute for the textarea </td>
         </tr>
-         <tr>
-          <td>mediaPartAttribute</td>
-          <td>String</td>
-          <td>no</td>
-          <td>webcl-media</td>
-          <td></td>
-          <td>The part name for media component</td>
-        </tr>
            <tr>
           <td>isAutoFocus</td>
           <td>boolean</td>
