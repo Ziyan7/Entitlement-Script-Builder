@@ -18,22 +18,25 @@ npm i --save url-shortener
 ## Usage
 
 `config/db.config.js`
+```js
 const mongoose = require('mongoose')
 
-<!-- declare a Database string URI -->
+//declare a Database string URI 
 const DB_URI = process.env.DB_URL;
 
-<!-- establishing a database connection -->
+//establishing a database connection 
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
 const connection = mongoose.connection
-<!-- export the connection object -->
+// export the connection object 
 module.exports = connection
+```
 
 `server.js`
+
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
