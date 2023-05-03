@@ -25,7 +25,7 @@ const app = express();
 const cors = require("cors");
 const {
   urlShortenerSchema,// return a mongoose schema
-  PostUrlShortener, //function to convert long url to short url and save the short url in the database
+  postUrlShortener, //function to convert long url to short url and save the short url in the database
   getUrlShortener, //function to redirect to the long/original URL on using the short url
 } = require("@yml-org/fe-component-library/packages/url-shortener/src/index.ts");
 
@@ -48,7 +48,7 @@ app.use(
 app.use(cors());
 
 app.post("/api/url/shorten", function async(req, res) { 
-  PostUrlShortener(req, res, baseUrl, Url);
+  postUrlShortener(req, res, baseUrl, Url);
 });
 
 app.get("/:code", async (req, res) => {
