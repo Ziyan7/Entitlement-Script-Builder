@@ -36,7 +36,7 @@ module.exports = connection
 ```
 
 `server.js`
-
+```js
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -47,17 +47,17 @@ const {
   getUrlShortener, //function to redirect to the long/original URL on using the short url
 } = require("@yml-org/fe-component-library/packages/url-shortener/src/index.ts");
 
-<!-- Database config -->
+// Database config 
 const connection = require("./config/db.config");
 const baseUrl = "http:localhost:7000";
 connection.once("open", () => console.log("MongoDB Connected"));
 connection.on("error", () => console.log("Error"));
 
-<!-- instantiate a mongoose schema -->
+//instantiate a mongoose schema 
 const URLSchema = new mongoose.Schema(urlShortenerSchema());
 const Url = mongoose.model("Url", URLSchema);
 
-<!-- Routes Config -->
+// Routes Config 
 app.use(
   express.json({
     extended: false,
@@ -73,6 +73,7 @@ app.get("/:code", async (req, res) => {
   getUrlShortener(req, res, Url);
 });
 
-<!-- Listen for incoming requests -->
+// Listen for incoming requests 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, console.log(`server started, listening PORT ${PORT}`));
+```
