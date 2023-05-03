@@ -17,24 +17,6 @@ npm i --save url-shortener
 
 ## Usage
 
-`config/db.config.js`
-```js
-const mongoose = require('mongoose')
-
-//declare a Database string URI 
-const DB_URI = process.env.DB_URL;
-
-//establishing a database connection 
-mongoose.connect(DB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-
-const connection = mongoose.connection
-// export the connection object 
-module.exports = connection
-```
-
 `server.js`
 ```js
 const express = require("express");
@@ -76,4 +58,22 @@ app.get("/:code", async (req, res) => {
 // Listen for incoming requests 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, console.log(`server started, listening PORT ${PORT}`));
+```
+
+`config/db.config.js`
+```js
+const mongoose = require('mongoose')
+
+//declare a Database string URI 
+const DB_URI = process.env.DB_URL;
+
+//establishing a database connection 
+mongoose.connect(DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+
+const connection = mongoose.connection
+// export the connection object 
+module.exports = connection
 ```
