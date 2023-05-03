@@ -17,23 +17,23 @@ npm i --save url-shortener
 
 ## Usage
 
-//config/db.config.js
+`config/db.config.js`
 const mongoose = require('mongoose')
 
-// declare a Database string URI
-const DB_URI = process.argv[3] || process.env.DB_URL;
+<!-- declare a Database string URI -->
+const DB_URI = process.env.DB_URL;
 
-// establishing a database connection
+<!-- establishing a database connection -->
 mongoose.connect(DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
 
 const connection = mongoose.connection
-// export the connection object
+<!-- export the connection object -->
 module.exports = connection
 
-//server.js
+`server.js`
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
@@ -44,18 +44,17 @@ const {
   getUrlShortener, //function to redirect to the long/original URL on using the short url
 } = require("@yml-org/fe-component-library/packages/url-shortener/src/index.ts");
 
-// Database config
+<!-- Database config -->
 const connection = require("./config/db.config");
 const baseUrl = "http:localhost:7000";
 connection.once("open", () => console.log("MongoDB Connected"));
 connection.on("error", () => console.log("Error"));
 
-// instantiate a mongoose schema
+<!-- instantiate a mongoose schema -->
 const URLSchema = new mongoose.Schema(urlShortenerSchema());
-
 const Url = mongoose.model("Url", URLSchema);
 
-// Routes Config
+<!-- Routes Config -->
 app.use(
   express.json({
     extended: false,
@@ -71,6 +70,6 @@ app.get("/:code", async (req, res) => {
   getUrlShortener(req, res, Url);
 });
 
-//Listen for incoming requests
+<!-- Listen for incoming requests -->
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, console.log(`server started, listening PORT ${PORT}`));
